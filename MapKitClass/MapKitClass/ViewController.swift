@@ -10,21 +10,41 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var mapView: MKMapView!
+    
+    var points = [CLLocationCoordinate2D]()
     
     var locationManagerDelegate: LocationManagerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setLocationManager()
+        mapView.showsUserLocation = !mapView.isUserLocationVisible
     }
     
     private func setLocationManager() {
         locationManagerDelegate = LocationManagerDelegate(vC: self)
         locationManagerDelegate?.setUp()
     }
-
-
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let position: CGPoint = touch.location(in: view)
+            let coord = mapView.convert(position, toCoordinateFrom: self.view)
+            points.append(coord)
+            
+            mapView.removeAnnotations(mapView.annotations)
+            
+            let ann = MKPointAnnotation()
+            ann.coordinate = coord
+            ann.title = "Meu Pin"
+            mapView.addAnnotation(ann)
+            
+        }
+    }
+    
+    
 }
 
