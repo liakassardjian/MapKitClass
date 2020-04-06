@@ -13,6 +13,7 @@
 		E4227659243BCC930053DC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4227657243BCC930053DC65 /* Main.storyboard */; };
 		E422765B243BCC950053DC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E422765A243BCC950053DC65 /* Assets.xcassets */; };
 		E422765E243BCC950053DC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E422765C243BCC950053DC65 /* LaunchScreen.storyboard */; };
+		E4227666243BCD630053DC65 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4227665243BCD620053DC65 /* LocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E422765A243BCC950053DC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E422765D243BCC950053DC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E422765F243BCC950053DC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4227665243BCD620053DC65 /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		E4227650243BCC930053DC65 /* MapKitClass */ = {
 			isa = PBXGroup;
 			children = (
+				E4227665243BCD620053DC65 /* LocationManagerDelegate.swift */,
 				E4227651243BCC930053DC65 /* AppDelegate.swift */,
 				E4227653243BCC930053DC65 /* SceneDelegate.swift */,
 				E4227655243BCC930053DC65 /* ViewController.swift */,
@@ -141,6 +144,7 @@
 				E4227656243BCC930053DC65 /* ViewController.swift in Sources */,
 				E4227652243BCC930053DC65 /* AppDelegate.swift in Sources */,
 				E4227654243BCC930053DC65 /* SceneDelegate.swift in Sources */,
+				E4227666243BCD630053DC65 /* LocationManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
